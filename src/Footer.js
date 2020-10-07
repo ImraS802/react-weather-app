@@ -7,7 +7,7 @@ export default function Footer() {
         <a
           href="https://github.com/ImraS802/react-weather-app"
           target="_blank"
-          class="open-source"
+          rel="noopener noreferrer"
         >
           <em>Open-source code </em>
         </a>
