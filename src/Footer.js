@@ -9,7 +9,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <em>Open-source code </em>
+          <em>Open-sourced on GitHub </em>
         </a>
         <em>by Imra S.</em>
       </small>
