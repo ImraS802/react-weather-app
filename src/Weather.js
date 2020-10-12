@@ -17,7 +17,7 @@ export default function Weather() {
   return (
     <div className="weather-app-wrapper">
       <div className="Weather">
-        <form className="form-inline" id="search-form">
+        <form className="form-inline">
           <div className="form-group mb-2">
             <label for="staticCity2" className="sr-only"></label>
           </div>
@@ -33,7 +33,11 @@ export default function Weather() {
             />
           </div>
           <div className="col-3">
-            <button type="submit" className="btn btn-primary mb-2 shadow">
+            <button
+              type="submit"
+              className="btn btn-primary mb-2 shadow"
+              id="search-button"
+            >
               Search
             </button>
           </div>
@@ -79,11 +83,11 @@ export default function Weather() {
           <div className="temperature">{weatherData.temperature}</div>
           <span className="units">
             <a href="/">
-              <strong>°C</strong>
+              <strong className="celsius">°C</strong>
             </a>{" "}
-            |{" "}
+            <strong className="unitSeperator"> | </strong>
             <a href="/">
-              <strong>°F</strong>
+              <strong className="fahrenheit">°F</strong>
             </a>
           </span>
         </div>

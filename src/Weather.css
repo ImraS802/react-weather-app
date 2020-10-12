@@ -1,12 +1,23 @@
+#input-city {
+  border: 1px solid #b6b6b6;
+}
+
+#search-button {
+  background-color: #e6e1e1;
+  color: #616161;
+  border: 1px solid #b6b6b6;
+}
+
 #current-location-button {
   padding: 6px 12px;
+  background-color: #818181;
   border: 1px solid transparent;
   margin-left: 0.5rem;
   margin-bottom: 0.5rem !important;
 }
 
 .Weather .weather-data {
-  color: #1f80cc;
+  color: #818181;
   font-size: 20px;
   font-weight: 900;
   list-style: none;
@@ -22,7 +33,7 @@ img {
 }
 
 .Weather .temperature {
-  color: #1f80cc;
+  color: #818181;
   font-weight: 400;
   font-size: 80px;
   margin-left: 220px;
@@ -31,10 +42,26 @@ img {
   line-height: 1.5;
 }
 
-.Weather .units {
+.units .celsius {
   font-size: 17px;
   position: relative;
   top: -90px;
   left: 320px;
-  color: #979797;
+  color: #818181;
+}
+
+.units .fahrenheit {
+  font-size: 17px;
+  position: relative;
+  top: -90px;
+  left: 320px;
+  color: #818181;
+}
+
+.units .unitSeperator {
+  font-size: 17px;
+  position: relative;
+  top: -90px;
+  left: 320px;
+  color: #818181;
 }
