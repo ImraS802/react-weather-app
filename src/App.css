@@ -31,6 +31,7 @@ h1 {
 }
 
 .Footer {
-  margin-left: 24.3rem;
+  max-width: 600px;
+  margin: auto;
   line-height: 1.2;
 }
