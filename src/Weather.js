@@ -28,8 +28,8 @@ export default function Weather() {
               className="form-control shadow"
               id="input-city"
               placeholder="Enter a city"
-              autocomplete="off"
-              autofocus="on"
+              autoComplete="off"
+              autoFocus="on"
             />
           </div>
           <div className="col-3">
