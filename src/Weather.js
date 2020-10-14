@@ -4,9 +4,10 @@ import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+ 
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -31,7 +32,7 @@ export default function Weather() {
 
   function search() {
     const apiKey = "32f74cfde224610d71a804af24f60879";
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -73,51 +74,9 @@ export default function Weather() {
             </button>
           </form>
           <br />
-          <h1>city={weatherData.city}</h1>
-          <div className="weather-data">
-            <div className="row">
-              <div className="col-7">
-                <div className="float-left">
-                  <ul>
-                    <li>Last updated: <FormattedDate date={weatherData.date} /> </li>
-                    <li className="text-capitalize">
-                      {weatherData.description}
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-5">
-                <ul>
-                  <li>Humidity: {weatherData.humidity}% </li>
-                  <li>Wind: {weatherData.wind} km/h</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+         <WeatherInfo data={weatherData}/>
 
-          <div className="col-6">
-            <div className="weather-icon">
-              <div className="row">
-                <img
-                  src={weatherData.iconUrl}
-                  alt={weatherData.description}
-                  className="float-left"
-                />
-              </div>
-            </div>
-            <div className="temperature">
-              {Math.round(weatherData.temperature)}
-            </div>
-            <span className="units">
-              <a href="/">
-                <strong className="celsius">°C</strong>
-              </a>{" "}
-              <strong className="unitSeperator"> | </strong>
-              <a href="/">
-                <strong className="fahrenheit">°F</strong>
-              </a>
-            </span>
-          </div>
+          
         </div>
       </div>
     );

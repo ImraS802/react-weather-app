@@ -1,0 +1,56 @@
+import React from "react";
+import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
+
+export default function WeatherInfo(props) {
+  return (
+      <div className="WeatherInfo">
+          <h1>city={weatherData.city}</h1>
+          <div className="weather-data">
+            <div className="row">
+              <div className="col-7">
+                <div className="float-left">
+                  <ul>
+                    <li>Last updated: <FormattedDate date={weatherData.date} /> </li>
+                    <li className="text-capitalize">
+                      {weatherData.description}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-5">
+                <ul>
+                  <li>Humidity: {weatherData.humidity}% </li>
+                  <li>Wind: {weatherData.wind} km/h</li>
+                </ul>
+              </div>
+            </div>
+          </div> 
+
+          <div className="col-6">
+            <div className="weather-icon">
+              <div className="row">
+                <img
+                  src={weatherData.iconUrl}
+                  alt={weatherData.description}
+                  className="float-left"
+                />
+              </div>
+            </div>
+            <div className="temperature">
+              {Math.round(weatherData.temperature)}
+            </div>
+            <span className="units">
+              <a href="/">
+                <strong className="celsius">°C</strong>
+              </a>{" "}
+              <strong className="unitSeperator"> | </strong>
+              <a href="/">
+                <strong className="fahrenheit">°F</strong>
+              </a>
+            </span>
+          </div>
+      </div>
+       );
+}
