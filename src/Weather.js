@@ -79,7 +79,7 @@ export default function Weather() {
               <div className="col-7">
                 <div className="float-left">
                   <ul>
-                    <li>Last updated: {weatherData.date}</li>
+                    <li>Last updated: <FormattedDate date={weatherData.date} /> </li>
                     <li className="text-capitalize">
                       {weatherData.description}
                     </li>
