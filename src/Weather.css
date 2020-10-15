@@ -40,23 +40,7 @@ canvas {
   line-height: 1.5;
 }
 
-.units .celsius {
-  font-size: 17px;
-  position: relative;
-  top: -90px;
-  left: 320px;
-  color: #818181;
-}
-
-.units .fahrenheit {
-  font-size: 17px;
-  position: relative;
-  top: -90px;
-  left: 320px;
-  color: #818181;
-}
-
-.units .unitSeperator {
+.unit {
   font-size: 17px;
   position: relative;
   top: -90px;

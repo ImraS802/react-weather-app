@@ -36,18 +36,8 @@ export default function WeatherInfo(props) {
                 </div>
               </div>
             </div>
-            <div className="temperature">
-              {Math.round(weatherData.temperature)}
-            </div>
-            <span className="units">
-              <a href="/">
-                <strong className="celsius">°C</strong>
-              </a>{" "}
-              <strong className="unitSeperator"> | </strong>
-              <a href="/">
-                <strong className="fahrenheit">°F</strong>
-              </a>
-            </span>
+            <WeatherTemperature celsius={props.data.temperature} />
+            
           </div>
       </div>
        );
