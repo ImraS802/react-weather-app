@@ -25,10 +25,8 @@
   line-height: 1.5;
 }
 
-img {
+canvas {
   margin-right: 5px;
-  width: 170px;
-  height: 100px;
   padding-left: 18px;
 }
 
