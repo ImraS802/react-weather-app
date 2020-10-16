@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
-import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 
@@ -41,7 +40,7 @@ export default function Weather(props) {
       <div className="weather-app-wrapper">
         <div className="Weather">
           <form onSubmit={handleSubmit}>
-            <div className="form-group mb-2">
+            <div className="form-group mb-7">
               <label for="staticCity2" className="sr-only"></label>
             </div>
             <div className="form-group mx-sm-3 mb-2">
@@ -56,7 +55,7 @@ export default function Weather(props) {
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-3">
+            <div className="col-5">
               <button
                 type="submit"
                 className="btn btn-primary mb-2 shadow"
@@ -65,18 +64,8 @@ export default function Weather(props) {
                 Search
               </button>
             </div>
-
-            <button
-              className="btn btn-success w-200 shadow"
-              id="current-location-button"
-            >
-              via GPS
-            </button>
           </form>
-          <br />
          <WeatherInfo data={weatherData}/>
-
-          
         </div>
       </div>
     );
