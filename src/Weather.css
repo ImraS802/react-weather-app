@@ -35,7 +35,7 @@ canvas {
   line-height: 1;
 }
 
-.WeatherTemperature .units {
+.weatherTemperature .units {
   font-size: 10px;
   position: relative;
   top: -150px;
