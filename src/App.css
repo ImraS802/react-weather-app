@@ -1,5 +1,5 @@
 .weather-app-wrapper {
-  padding: 60px 60px 25px 60px;
+  padding: 50px 60px 25px 60px;
   max-width: 600px;
   margin: 30px auto;
   margin-bottom: 5px;
@@ -30,9 +30,15 @@ h1 {
   margin-bottom: -0.5rem;
 }
 
+h4 {
+  text-align: center;
+  color: #818181;
+}
+
 .Footer {
-  max-width: 600px;
+  max-width: 590px;
   margin: auto;
   line-height: 1.2;
   font-size: 16px;
+  margin-bottom: 20px;
 }
