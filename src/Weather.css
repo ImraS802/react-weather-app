@@ -29,8 +29,9 @@ canvas {
   color: #818181;
   font-weight: 400;
   font-size: 80px;
-  margin-left: 110px;
+  text-align: center;
   margin-right: 5px;
+  margin-left: 90px;
   margin-top: -85px;
   line-height: 1;
 }
